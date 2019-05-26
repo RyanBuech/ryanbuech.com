@@ -1,11 +1,17 @@
+.nav
+{
+  float: right;
+}
+
 .nav .menu
 {
   width: 100%;
+  height: 9.1%;
   text-align: right;
   /*box-shadow: 1px 2px 4px grey;*/
-  background: rgba(2,2,2,0.2);
-  position: absolute;
-  z-index: 9;
+  background: rgba(0, 255, 64, 0.562);
+  position: relative;
+  z-index: 5;  
 }
 .menu li
 {
@@ -32,6 +38,50 @@
   background: white;
   color: black;  
 }
+.burger
+{
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+}
+.burger img
+{
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  position: fixed;
+  z-index: 3;
+  right: 5px;
+  top: 5px;
+}
+
+@media screen and (max-width:868px)
+{
+  body 
+  {
+    overflow-x: hidden;
+  }
+  .menu
+  {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    transform: translate(100%);
+    transition : transform 0.5s ease-in;
+  }
+  .burger
+  {
+    display: block;
+  }
+}
+.menu-active
+{
+  transform: translateX(0%);
+}
 
 .section 
 {
@@ -50,20 +100,66 @@
   font-size: 4rem;
   font-family: "Cookie";
   margin: 5px;
-  z-index: 10;
+  z-index: 5;
   color: white;
 }
 
-.content p
+table
 {
   position: absolute;
   text-align: left;
   font-size: 3rem;
+  font-family: "Ubuntu";
+  padding: 0px;
+  padding-top: 0px;
+  margin: 70px;
+  z-index: 3;
+  padding: 10px;
+}
+table, grey
+{
+  font-size: 3rem;
+  font-weight: bold;
+  color: grey;
+}
+table, cfb
+{
+  font-size: 2rem;
+  font-weight: 100;
+  color: cornflowerblue;
+}
+table, p10
+{  
+  font-size: 1.3rem;  
+  color: white;
+}
+table, p14
+{
+  font-size: 1.5rem;
+  color: white;
+}
+
+hr { 
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  position: relative;
+  color: red;
+  z-index: 3;
+}
+
+.content
+{
+  position: fixed;
+  z-index: 4;
+  text-align: center;
+  font-size: 3rem;
   font-family: "Cookie";
-  padding: 20px;
-  padding-top: 0;
-  margin: 150px;
-  z-index: 1;
+  margin: 75px;
   color: white;
 }
 
@@ -74,7 +170,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -10;
+  z-index: -1;
 }
 .video-container video
 {
@@ -94,9 +190,10 @@
 .color-overlay 
 {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
-  /*background-color: lightblue;*/
+  background-color: rgb(255, 0, 0);
   width: 100%;
   height: 100vh;
   opacity: 0.5;
