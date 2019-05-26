@@ -6,10 +6,10 @@
 .nav .menu
 {
   width: 100%;
-  height: 9.1%;
+  height: auto;
   text-align: right;
   /*box-shadow: 1px 2px 4px grey;*/
-  background: rgba(0, 255, 64, 0.562);
+  background: rgba(0, 0, 0, 0.562);
   position: relative;
   z-index: 5;  
 }
@@ -71,7 +71,7 @@
     display: flex;
     flex-direction: column;
     transform: translate(100%);
-    transition : transform 0.5s ease-in;
+    transition : transform 0.3s ease-in;
   }
   .burger
   {
@@ -193,7 +193,7 @@ hr {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(255, 0, 0);
+  background-color: rgba(255, 0, 0, 0);
   width: 100%;
   height: 100vh;
   opacity: 0.5;
