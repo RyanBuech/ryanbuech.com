@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <meta property="og:image" content="./images/R.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./images/R.png">
     <title>RyanBuech.com</title>
@@ -14,39 +16,68 @@
 
 <body>
     <div class="nav">
-        
-        <ul class="menu">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./work.html">Work</a></li>
-            <li><a href="./resume.html">Resume</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle">
+        <div class="menu">
+                <a href="./index.html">Home</a>
+                <a href="./work.html">Work</a>
+                <a href="./resume.html">Resume</a>
+                <a href="./contact.html">Contact</a>
+        </div>        
 
-        <div class="burger">
-                <img src="./images/burger.png">
-        </div>
-    </div>
-
-    <div class="section">
-
-        <h1>Ryan Buech</h1>
-
-        <div class="video-container">
-                <div class="color-overlay"></div>
-                <video autoplay loop muted>
-                    <source src="./videos/Geometric Particles.mp4" type="video/mp4">
-                </video>
-            </div>
-    </div>
+        <img src="./images/White R.png" class="cover">
+    </div>     
 
     <div class="content">
-        <p>Work.html</p>
-    </div>
-        <div class="game">
-            <img style="top:100px; left:100px" src="./images/r 800 grey.jpg" onmouseover="this.src='./images/Neon R.png'" onmouseout="this.src='./images/r 800 grey.jpg'"> 
+        <p>Work page</p>
+
+        <div>
+            <div class="container">
+                <img src="./images/R Red.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">Game 1 bruv</div>
+                </div>
+            </div>
         </div>
 
-        <script src="app.js"></script>
-</body>
+        <div>
+            <div class="container">
+                <img src="./images/R Red.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">Game 2 bruv</div>
+                </div>
+            </div>
+        </div>
 
+        <div>
+            <div class="container">
+                <img src="./images/R Red.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">Game 2 bruv</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="container">
+                <img src="./images/R Red.jpg" onmouseover="this.src='./images/Neon R.png'" onmouseout="this.src='./images/R Red.jpg'" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">Game 2 bruvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv this is for more room bruv</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="video-container">
+        <div class="color-overlay"></div>
+            <video autoplay loop muted>
+                <source src="./videos/Geometric Particles.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>   
+
+    <script src="./includes/app.js"></script>
+</body>
 </html>

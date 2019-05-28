@@ -1,240 +1,171 @@
-.nav
-{
-  float: right;
+*
+{    
+  box-sizing: border-box;
 }
 
-.nav .menu
+html, body 
 {
-  width: 100%;
-  height: auto;
-  text-align: right;
-  /*box-shadow: 1px 2px 4px grey;*/
-  background: rgba(0, 0, 0, 0.562);
-  position: relative;
-  z-index: 5;  
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: Ubuntu;
 }
-.hidden
+/* ubuntu-regular - latin */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/ubuntu-v13-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Ubuntu Regular'), local('Ubuntu-Regular'),
+         url('../fonts/ubuntu-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/ubuntu-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/ubuntu-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/ubuntu-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/ubuntu-v13-latin-regular.svg#Ubuntu') format('svg'); /* Legacy iOS */
+  }
+  /* ubuntu-700 - latin */
+  @font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/ubuntu-v13-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
+         url('../fonts/ubuntu-v13-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/ubuntu-v13-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/ubuntu-v13-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/ubuntu-v13-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/ubuntu-v13-latin-700.svg#Ubuntu') format('svg'); /* Legacy iOS */
+  }
+
+.nav
 {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 5;
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    background-color: rgba(66, 66, 66, .5);
+    position: relative;
 }
-.menu li
+.nav img.cover
 {
-  list-style-type: none;
-  display: inline-block;
-  padding: 10px;
-  margin : 0px 10px;
-  font-family: "Cookie";
-  font-size: 4rem;
-  color: white;  
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 60px;
+    height: auto;
 }
-.menu a 
+
+.menu
 {
-  text-decoration: none;
-  padding: 10px;
-  cursor: pointer;
+    margin: 0 30 0 0;
 }
-.menu a:link, a:visited 
+.menu img
 {
-  color: white;
+    width: 25px;
+    position: absolute;
+    top: 25px;
+    right: 320px;
+}
+.menu a
+{
+    clear: right;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    margin: 0 2px; 
+    line-height: 70px;
+    padding: 22px;
 }
 .menu a:hover
 {
-  background: white;
-  color: black;  
-}
-.burger
-{
-  display: none;
-  cursor: pointer;
-  position: absolute;
-  z-index: 3;
-}
-.burger img
-{
-  width: 30px;
-  height: 30px;
-  margin: 5px;
-  position: fixed;
-  z-index: 3;
-  right: 5px;
-  top: 5px;
+    color: white;
+    background-color: rgba(46, 46, 46, 0.5);
 }
 
-@media screen and (max-width:868px)
+label
 {
-  .hidden 
-  {
-    overflow-x: hidden;
-  }
-  .menu
-  {
-    position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 50px;
-    display: flex;
-    flex-direction: column;
-    transform: translate(100%);
-    transition : transform 0.3s ease-in;
-  }
-  .burger
-  {
-    display: block;
-  }
-
-  .righthalf
-  {
-    width: 100%;
-  }
-
-  .lefthalf
-  {
-    width: 100%;
-  }
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    widows: 26px;
+    float: right;
+    color: white;
 }
-.menu-active
+#toggle
 {
-  transform: translateX(0%);
+    display: none;
 }
 
-.section 
+body
 {
-  position: fixed;
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: top;
-  justify-content: left;
-  overflow: hidden;
-  z-index: 1;
-}
-.section h1 
-{
-  text-align: center;
-  font-size: 4rem;
-  font-family: "Cookie";
-  margin: 5px;
-  position: fixed;
-  z-index: 5;
-  color: white;
+    background-color: black;
 }
 
-.blankr
+.column 
 {
-  height: 20px !important;
-  background-color: rgba(0, 0, 0, 0)
-}
-.blankc
+    float: left;
+    width: 50%;
+    padding: 10px;    
+} 
+.row:after 
 {
-  width: 20px !important;
-  background-color: rgba(0, 0, 0, 0);
-  display: none;
-}
-.right
-{
-  float: right;
-}
-table
-{
-  position: relative;
-  font-size: 3rem;
-  font-family: "Ubuntu";
-  margin: 10px;
-  z-index: 4;
-  display: inline-block
+    content: "";
+    display: table;
+    clear: both;
 }
 table img
 {
-  width: 25px;
+  width: 50px;
   height : auto;
-  vertical-align: center;
-  padding:10px 10px 0px 10px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
 }
-table, grey
+grey
 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: grey;
+    font-size: 3rem;
+    font-weight: bold;
+    color: grey;
 }
-table, cfb
+cfb
+{
+    font-size: 2rem;
+    font-weight: 100;
+    color: cornflowerblue;
+}
+p10
+{
+    font-size: 1.3rem;  
+    font-weight: 100;
+    color: white;
+}
+p10l
+{
+    font-size: 1.3rem;  
+    font-weight: 100;
+    color: white;
+    padding: 10px;
+}
+p14
 {
   font-size: 2rem;
   font-weight: 100;
-  color: cornflowerblue;
-}
-table, p10
-{  
-  font-size: 1.3rem;  
-  font-weight: 100;
   color: white;
 }
-table, p10tab
-{  
-  font-size: 1.3rem;  
-  font-weight: 100;
-  color: white;  
-}
-table, p14
-{
-  font-size: 2rem;
-  font-weight: 100;
-  color: white;
-}
-table, p14b
+p14b
 {
   font-size: 2.5rem;
   font-weight: bold;
   color: white;
 }
-.lefthalf
-{
-  width: 50%;
-  float: left;
-}
-.righthalf
-{
-  width: 50%;
-  float: right;
-}
-.tophalf
-{
-  width: 100%;
-  position: relative;
-  display: flex;
-}
-.bothalf
-{
-  width: 100%;
-  position: relative;
-  display: flex;
-}
-
-hr { 
-  display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 1px;
-  position: relative;
-  color: red;
-  z-index: 3;
-}
 
 .content
 {
-  position: absolute;
-  z-index: 4;
-  font-size: 3rem;
-  font-family: "Cookie";
-  margin-right: 400px;
-  margin-left: 400px;
-  margin-top: 100px;
-  color: white;
+    margin: 100px 200px;
+    color: white;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 .content a
 {
@@ -250,6 +181,49 @@ hr {
 {
   background: white;
   color: black;  
+}
+
+.container 
+{
+    position: relative;
+    float: left;
+    width: 28%;
+    margin: 20px;
+}  
+.image 
+{
+    display: block;
+    width: 100%;
+    height: auto;
+}  
+.overlay 
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(46, 46, 46, 0.75);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}  
+.container:hover .overlay 
+{
+    height: 30%;
+}  
+.text 
+{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .video-container 
@@ -276,27 +250,54 @@ hr {
   transform: translate(-50%,-50%);*/
 }
 
-.color-overlay 
+@media screen and (max-width:768px)
 {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 0, 0, 0);
-  width: 100%;
-  height: 100vh;
-  opacity: 0.5;
+    label
+    {
+        display: block;
+        cursor: pointer;        
+    }
+    .menu
+    {
+        clear: right;
+        text-align: center;
+        width: 50%;     
+        display: none;   
+        float: right;
+    }
+    .menu a
+    {
+        display: block;
+        border-bottom: 1px solid rgba(66, 66, 66, .5);
+        margin: 0;
+        background-color: rgba(66, 66, 66, .5);
+        font-size: 50px;
+    }
+    .menu a:hover
+    {
+        color: white;
+        background-color: rgba(46, 46, 46, 0.5);
+    }
+    #toggle:checked + .menu 
+    {
+        display: block;
+    }
+
+    .column 
+    {
+        width: 100%;
+    }
+
+    .content
+    {
+        margin: 100px 50px;
+    }
 }
 
-.game img 
+@media screen and (max-width:1000px)
 {
-  width: 300px;
-  height: auto;
-  position: absolute;
-  z-index: 5;  
-}
-
-body
-{
-  background-color: black
+    .content
+    {
+        margin: 100px 50px;
+    }
 }
