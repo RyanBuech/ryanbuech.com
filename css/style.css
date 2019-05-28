@@ -42,7 +42,7 @@ html, body
     text-align: right;
     height: 70px;
     line-height: 70px;
-    background-color: rgba(66, 66, 66, .5);
+    background-color: rgba(29, 29, 29, 1);
     position: relative;
 }
 .nav img.cover
@@ -57,6 +57,8 @@ html, body
 .menu
 {
     margin: 0 30 0 0;
+    z-index: 99;
+    position: relative;
 }
 .menu img
 {
@@ -106,7 +108,7 @@ body
 {
     float: left;
     width: 50%;
-    padding: 10px;    
+    padding: 10px;
 } 
 .row:after 
 {
@@ -165,6 +167,8 @@ p14b
     margin: 100px 200px;
     color: white;
     max-width: 100%;
+    position: absolute;
+    z-index: 0;
     word-wrap: break-word;
 }
 .content a
@@ -250,6 +254,14 @@ p14b
   transform: translate(-50%,-50%);*/
 }
 
+@media screen and (max-width:1000px)
+{
+    .content
+    {
+        margin: 10px 20px;
+    }
+}
+
 @media screen and (max-width:768px)
 {
     label
@@ -270,13 +282,13 @@ p14b
         display: block;
         border-bottom: 1px solid rgba(66, 66, 66, .5);
         margin: 0;
-        background-color: rgba(66, 66, 66, .5);
-        font-size: 50px;
+        background-color: rgba(29, 29, 29, 1);
+        font-size: 30px;
     }
     .menu a:hover
     {
         color: white;
-        background-color: rgba(46, 46, 46, 0.5);
+        background-color: rgb(14, 14, 14);;
     }
     #toggle:checked + .menu 
     {
@@ -286,18 +298,25 @@ p14b
     .column 
     {
         width: 100%;
+        padding: 0px;
     }
 
     .content
     {
-        margin: 100px 50px;
-    }
+        margin: 0px 20px;
+    }    
 }
 
-@media screen and (max-width:1000px)
+@media screen and (max-width:500px)
 {
     .content
     {
-        margin: 100px 50px;
+        margin: 0px 20px;
+    }
+
+    .row
+    {
+        width: 90%;
+        margin-left: 0px;
     }
 }
