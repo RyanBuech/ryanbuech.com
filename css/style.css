@@ -166,9 +166,8 @@ p14b
 {
     margin: 100px 200px;
     color: white;
-    max-width: 100%;
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     word-wrap: break-word;
 }
 .content a
@@ -191,7 +190,7 @@ p14b
 {
     position: relative;
     float: left;
-    width: 28%;
+    width: 29%;
     margin: 20px;
 }  
 .image 
@@ -219,7 +218,7 @@ p14b
 .text 
 {
     color: white;
-    font-size: 20px;
+    font-size: 12px;
     position: absolute;
     top: 50%;
     left: 50%;
