@@ -44,6 +44,10 @@ html, body
     line-height: 70px;
     background-color: rgba(29, 29, 29, 1);
     position: relative;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 .nav img.cover
 {
@@ -123,6 +127,54 @@ table img
   text-align: center;
   vertical-align: middle;
   padding: 5px;
+  float: left;
+}
+.gametable img
+{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    cursor: pointer; 
+}
+.imgpopup
+{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    display: none;
+}
+.imgpopup .showoverlay
+{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .66);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.imgpopup .imgshow
+{
+    width: 70%;
+    height: auto;
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.close
+{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.imgpopup img
+{
+    width: 100%;
+    height: 100%;
 }
 grey
 {
@@ -161,7 +213,12 @@ p14b
   font-weight: bold;
   color: white;
 }
-
+pad
+{
+    margin: 100px;
+    width: 100%;
+    height: 200px;
+}
 .content
 {
     margin: 100px 200px;
@@ -170,27 +227,33 @@ p14b
     z-index: 1;
     word-wrap: break-word;
 }
-.content a
+.content a.reg
 {
   text-decoration: none;
   padding: 10px;
   cursor: pointer;
 }
-.content a:link, a:visited 
+.content a.reg:link, a:visited 
 {
   color: white;
 }
-.content a:hover
+.content a.reg:hover
 {
   background: white;
   color: black;  
+}
+#rediv a
+{
+    color: teal;
+    font-weight: 700;
+    line-height: 50px;
 }
 
 .container 
 {
     position: relative;
     float: left;
-    width: 29%;
+    width: 41%;
     margin: 20px;
 }  
 .image 
@@ -218,7 +281,7 @@ p14b
 .text 
 {
     color: white;
-    font-size: 12px;
+    font-size: 16px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -227,6 +290,15 @@ p14b
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+    -webkit-user-select: none;       
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.videoplayer
+{
+    width: 100%;
 }
 
 .video-container 
@@ -253,11 +325,16 @@ p14b
   transform: translate(-50%,-50%);*/
 }
 
-@media screen and (max-width:1000px)
+@media screen and (max-width:1200px)
 {
     .content
     {
         margin: 10px 20px;
+    }
+
+    .imgpopup .imgshow
+    {
+        width: 95%
     }
 }
 
@@ -303,7 +380,12 @@ p14b
     .content
     {
         margin: 0px 20px;
-    }    
+    }   
+    
+    .text
+    {
+        font-size: 12px;
+    } 
 }
 
 @media screen and (max-width:500px)
@@ -318,4 +400,5 @@ p14b
         width: 90%;
         margin-left: 0px;
     }
+    
 }

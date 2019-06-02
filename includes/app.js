@@ -1,12 +1,33 @@
-const navSlide = () => 
+$(function ()
 {
-    const burger = document.querySelector('.burger');
-    const menu = document.querySelector('.menu');
+    "use strict";
 
-    burger.addEventListener('click', () => 
+    $(".gametable img").click(function()
     {
-        menu.classList.toggle('menu-active');
-    });
-}
+        var $src = $(this).attr("src");
 
-navSlide();
+        $(".imgpopup").fadeIn();
+        $(".imgshow img").attr("src", $src);
+    });
+
+    $(".close").click(function()
+    {
+        var $src = $(this).attr("src");
+
+        $(".imgpopup").fadeOut();
+    });
+
+    $(".imgpopup").click(function()
+    {
+        var $src = $(this).attr("src");
+
+        $(".imgpopup").fadeOut();
+    });
+
+    $(".nav").click(function()
+    {
+        var $src = $(this).attr("src");
+
+        $(".imgpopup").fadeOut();
+    });
+});
