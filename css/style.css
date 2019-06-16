@@ -57,6 +57,7 @@ html, body
     left: 5px;
     width: 60px;
     height: auto;
+    cursor: pointer;
 }
 
 .menu
@@ -209,6 +210,7 @@ p10l
 {
     font-size: 1.3rem;  
     font-weight: 100;
+    text-decoration: none;
     color: white;
     padding: 10px;
 }
@@ -238,6 +240,7 @@ pad
     z-index: 1;
     word-wrap: break-word;
     margin-bottom: -50px;
+    
 }
 .push
 {
@@ -408,13 +411,22 @@ pad
 {
     .content
     {
-        margin: 0px 20px;
+        margin: 0px 10px;
     }
 
     .row
     {
         width: 90%;
         margin-left: 0px;
+    }
+
+    .container
+    {
+        width: 37%;
+    }
+    .text
+    {
+        font-size: 10px;
     }
     
 }
