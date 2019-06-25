@@ -124,7 +124,7 @@ body
 {
     float: left;
     width: 50%;
-    padding: 10px;
+    padding: 10px;    
 } 
 .row:after 
 {
@@ -139,7 +139,10 @@ table img
   text-align: center;
   vertical-align: middle;
   padding: 5px;
-  float: left;
+}
+.tdimg
+{
+    width: 52px;
 }
 .gametable img
 {
@@ -181,6 +184,7 @@ table img
     right: 14px;
     font-size: 42px;
     transform: rotate(45deg);
+    color: white;
     cursor: pointer;
 }
 .imgpopup img
@@ -234,12 +238,11 @@ pad
 }
 .content
 {
-    margin: 100px 200px;
+    margin: 100px 300px;
     color: white;
     position: absolute;
     z-index: 1;
     word-wrap: break-word;
-    margin-bottom: -50px;
     
 }
 .push
@@ -258,14 +261,22 @@ pad
 }
 .content a.reg:hover
 {
-  background: white;
-  color: black;  
+    border-radius: 12px;
+    background: white;
+    color: black;  
 }
-#rediv a
+.content a.teal
 {
     color: teal;
+    text-decoration: none;
     font-weight: 700;
     line-height: 50px;
+    padding: 5px;
+}
+.content a.teal:hover
+{
+    border-radius: 12px;
+    background: white;
 }
 
 .container 
@@ -344,16 +355,21 @@ pad
   transform: translate(-50%,-50%);*/
 }
 
-@media screen and (max-width:1200px)
+@media screen and (max-width:1260px)
 {
     .content
     {
-        margin: 10px 20px;
+        margin: 20px 40px;
     }
 
     .imgpopup .imgshow
     {
         width: 95%
+    }
+
+    .container
+    {
+        width: 44%;
     }
 }
 
@@ -399,8 +415,12 @@ pad
     .content
     {
         margin: 0px 20px;
-    }   
-    
+    }  
+
+    .container
+    {
+        width: 41%;
+    }
     .text
     {
         font-size: 12px;
@@ -416,17 +436,17 @@ pad
 
     .row
     {
-        width: 90%;
+        width: 100%;
         margin-left: 0px;
     }
 
     .container
     {
-        width: 37%;
+        width: 89%;
     }
     .text
     {
-        font-size: 10px;
+        font-size: 20px;
     }
     
 }
