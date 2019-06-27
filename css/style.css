@@ -326,6 +326,58 @@ pad
     user-select: none;
 }
 
+.slideshow-container {
+    position: relative;
+}
+
+.slides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #222428;
+    font-weight: bold;
+    font-size: 30px;
+    transition: .25s ease;
+    border-radius: 0 3px 3px 0
+}
+
+.next {
+    right: 0px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev {
+    left: 0px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev:hover, .next:hover {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.7)
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 25%;
+    display: inline-block;
+    transition: background-color .25s ease
+}
+
+.active, .dot:hover {
+    background-color: #222428
+}
+
 .videoplayer
 {
     width: 100%;
