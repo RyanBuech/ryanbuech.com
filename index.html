@@ -11,7 +11,7 @@
     <meta property="og:image:height" content="1024">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" href="./images/R.png">
-    <title>RyanBuech.com</title>
+    <title>RyanBuech</title>
 </head>
 
 <body>
@@ -31,60 +31,79 @@
     <div class="content">
             
         <div class="row">
-            <div class="column">
-                <p14b>Text about me and stuff.</p14b>
-                <br><br><br><br>
-
+          <div class="column">
+            <div class="centertext">
+              <div>
+                <p12>
+                  My name is Ryan Buech, a Computer Science Major with a main focus Game Development and Game Programming. 
+                  During the time I spent getting my degree I grew an interest for Web Development and Software Development in general.
+                </p12><br><br>
+              </div>
+              <p12>
+                This site is a virtual collection of all of my work over the years.
+              </p12>
+              <br><br>
             </div>
+          </div>
         
-            <div class="column">
-                <div class="slideshow-container">
+          <div class="column">
+            <div class="slideshow-container">
 
-                    <div class="slides fade">                  
-                      <img  src='./images/DOM Menu.png' style='width: 100%;' alt="sally lightfoot crab"/>
-                    </div>
+              <div class="slides fade">                  
+                <img  src='./images/DOM Menu.png' style='width: 100%;' alt="DOM Menu"/>
+              </div>
                   
-                    <div class="slides fade">                  
-                      <img  src='./images/H4H Menu.png' style='width: 100%;' alt="fighting nazca boobies"/>
-                    </div>
+              <div class="slides fade">                  
+                <img  src='./images/H4H Menu.png' style='width: 100%;' alt="H4H Menu"/>
+              </div>
                   
-                    <div class="slides">                  
-                      <img  src='./images/Hell Hops Menu.png' style='width: 100%;' alt="otovalo waterfall"/>
-                    </div>
+              <div class="slides">                  
+                <img  src='./images/Hell Hops Menu.png' style='width: 100%;' alt="HH Menu"/>
+              </div>
                   
-                    <div class="slides fade">                  
-                      <img  src='./images/Pixel Clicker.png' style='width: 100%;' alt="pelican"/>
-                    </div>
-                  
-                  
-                    <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
-                    <a class="next" onclick='plusSlides(1)'>&#10095;</a>
-                  </div>
-                  <br/>
+              <div class="slides fade">                  
+                <img  src='./images/Pixel Clicker.png' style='width: 100%;' alt="PC Menu"/>
+              </div>
                   
                   
-                  <div style='text-align: center;'>
-                    <span class="dot" onclick='currentSlide(1)'></span>
-                    <span class="dot" onclick='currentSlide(2)'></span>
-                    <span class="dot" onclick='currentSlide(3)'></span>
-                    <span class="dot" onclick='currentSlide(4)'></span>
-                  </div>
-                  
-                  </div>
+              <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+              <a class="next" onclick='plusSlides(1)'>&#10095;</a>
             </div>
+            <br/>
+                  
+                  
+            <div class="dotholder">
+              <span class="dot" onclick='currentSlide(1)'></span>
+              <span class="dot" onclick='currentSlide(2)'></span>
+              <span class="dot" onclick='currentSlide(3)'></span>
+              <span class="dot" onclick='currentSlide(4)'></span>
+            </div>                  
+          </div>
         </div>
+
+        <div class="socials">
+          <br><br>
+          <table>
+            <tr>
+              <td><a href="https://github.com/RyanBuech" target="_blank"><img src="./images/github-logo.png" onmouseover="src='./images/github-logo-hollow.png'" onmouseout="src='./images/github-logo.png'"></a></td>
+              <td><a href="https://twitter.com/ryanbuech" target="_blank"><img src="./images/twitter-logo.png" onmouseover="src='./images/twitter-logo-hollow.png'" onmouseout="src='./images/twitter-logo.png'"></a></td>
+              <td><a href="https://www.linkedin.com/in/ryanbuech/" target="_blank"><img src="./images/linkedin-logo.png" onmouseover="src='./images/linkedin-logo-hollow.png'" onmouseout="src='./images/linkedin-logo.png'"></a></td>
+            </tr>
+          </table>
+        </div>
+
     </div>
 
 
 
     <div class="video-container">
-        <div class="color-overlay"></div>
-            <video autoplay loop muted poster="./videos/Poster.png">
-                <source src="./videos/Geometric Particles.mp4" type="video/mp4">
-                <source src="./videos/Geometric Particles.webm" type="video/webm">
-                <source src="./videos/Geometric Particles.ogv" type="video/ogg">
-            </video>
-        </div>
+      <div class="color-overlay"></div>
+        <video autoplay loop muted poster="./videos/Poster.png">
+          <source src="./videos/Geometric Particles.mp4" type="video/mp4">
+          <source src="./videos/Geometric Particles.webm" type="video/webm">
+          <source src="./videos/Geometric Particles.ogv" type="video/ogg">
+        </video>
+      </div>
     </div>   
 
     <script src="./includes/slider.js"></script>

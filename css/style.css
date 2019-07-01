@@ -63,8 +63,11 @@ html, body
 .menu
 {
     margin: 0 30 0 0;
+    top: 0px;
+    right: 0px;
     z-index: 99;
-    position: relative;
+    position: absolute;
+    float: right;
 }
 .menu img
 {
@@ -144,6 +147,12 @@ table img
 {
     width: 52px;
 }
+.resumelinks
+{
+    text-align: right;
+    vertical-align: middle;
+    width: 100%;
+}
 .gametable img
 {
     width: 100%;
@@ -172,8 +181,8 @@ table img
 {
     width: 70%;
     height: auto;
-    position: relative;
-    top: 45%;
+    position: fixed;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -218,6 +227,17 @@ p10l
     color: white;
     padding: 10px;
 }
+p12
+{
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: white;
+}
+.centertext
+{
+    vertical-align: middle;
+    margin-right: 10px;
+}
 p14
 {
   font-size: 2rem;
@@ -240,10 +260,10 @@ pad
 {
     margin: 100px 300px;
     color: white;
-    position: absolute;
+    position: relative;
     z-index: 1;
     word-wrap: break-word;
-    
+    overflow: auto;
 }
 .push
 {
@@ -285,6 +305,10 @@ pad
     float: left;
     width: 41%;
     margin: 20px;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }  
 .image 
 {
@@ -326,15 +350,22 @@ pad
     user-select: none;
 }
 
-.slideshow-container {
+.slideshow-container 
+{
     position: relative;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
-.slides {
+.slides 
+{
     display: none;
 }
 
-.prev, .next {
+.prev, .next 
+{
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -345,25 +376,42 @@ pad
     font-weight: bold;
     font-size: 30px;
     transition: .25s ease;
-    border-radius: 0 3px 3px 0
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
-.next {
+.next 
+{
     right: 0px;
     border-radius: 3px 3px 3px 3px
 }
 
-.prev {
+.prev 
+{
     left: 0px;
     border-radius: 3px 3px 3px 3px
 }
 
-.prev:hover, .next:hover {
+.prev:hover, .next:hover 
+{
     color: #f2f2f2;
     background-color: rgba(0, 0, 0, 0.7)
 }
 
-.dot {
+.dotholder
+{
+    text-align: center;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.dot 
+{
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -371,11 +419,32 @@ pad
     background-color: #bbb;
     border-radius: 25%;
     display: inline-block;
-    transition: background-color .25s ease
+    transition: background-color .25s ease;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
-.active, .dot:hover {
+.active, .dot:hover 
+{
     background-color: #222428
+}
+
+.socials img
+{
+    width: 80px;
+    height: auto;
+}
+.socials table
+{
+    width: 100%;
+    
+}
+.socials td
+{
+    width: 33%;
+    text-align: center;
 }
 
 .videoplayer
@@ -407,11 +476,19 @@ pad
   transform: translate(-50%,-50%);*/
 }
 
+br
+{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
 @media screen and (max-width:1260px)
 {
     .content
     {
-        margin: 20px 40px;
+        margin: 40px 40px;
     }
 
     .imgpopup .imgshow
@@ -434,6 +511,7 @@ pad
     }
     .menu
     {
+        top: 70px;
         clear: right;
         text-align: center;
         width: 50%;     
@@ -483,7 +561,7 @@ pad
 {
     .content
     {
-        margin: 0px 10px;
+        margin: 10px 10px;
     }
 
     .row
