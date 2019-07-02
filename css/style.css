@@ -107,16 +107,6 @@ label
 {
     display: none;
 }
-.footer
-{
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    font-size: 12px;
-    text-align: center;
-}
 
 body
 {
@@ -213,6 +203,14 @@ cfb
     font-weight: 100;
     color: cornflowerblue;
 }
+foot
+{
+    font-size: 11px;  
+    font-weight: 100;
+    color: white;
+    visibility: hidden;
+    text-align: center;
+}
 p10
 {
     font-size: 1.3rem;  
@@ -258,12 +256,13 @@ pad
 }
 .content
 {
-    margin: 100px 300px;
+    margin: 100px 300px 10px 300px;
     color: white;
     position: relative;
     z-index: 1;
     word-wrap: break-word;
     overflow: auto;
+    min-height: 75%;
 }
 .push
 {
@@ -484,11 +483,81 @@ br
     user-select: none; /* Standard */
 }
 
+.contact
+{
+   max-width: 600px;
+   margin: auto;
+   padding: 0 10px;
+   overflow: hidden;
+   
+}
+.contact-form-text
+{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: #ddd;
+    transition: .25s;
+    font-family: 'Ubuntu';
+}
+.contact-form-text:focus
+{
+    box-shadow: 0 0 10px 4px teal;
+}
+textarea.contact-form-text
+{
+    resize: none;
+    height: 120px;
+}
+.contact-form-btn
+{
+    float: right;
+    border: 0;
+    background: teal;
+    color: white;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .2s;
+}
+.contact-form-btn:hover
+{
+    background: #111;
+}
+.hidden
+{
+    display: none;
+}
+
+.footer
+{
+    position: relative;
+    height: 20px;
+    margin-top: 50px;
+    clear: both;    
+    text-align: center;
+}
+.foot::after
+{
+    visibility: visible;
+    content: "© 2019 Ryan Buech";
+    font-size: 11px;  
+    font-weight: 100;
+    color: white;
+}
+
+
 @media screen and (max-width:1260px)
 {
     .content
     {
         margin: 40px 40px;
+        min-height: 81%;
     }
 
     .imgpopup .imgshow
@@ -544,7 +613,8 @@ br
 
     .content
     {
-        margin: 0px 20px;
+        margin: 10px 20px;
+        min-height: 84%;
     }  
 
     .container
