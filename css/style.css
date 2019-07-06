@@ -1,3 +1,5 @@
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/848d6580/stylesheets/monokai.css');
+
 *
 {    
   box-sizing: border-box;
@@ -147,8 +149,12 @@ table img
 {
     width: 100%;
     height: auto;
-    padding: 10px;
+    margin: 5px;
     cursor: pointer; 
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 .imgpopup
 {
@@ -256,13 +262,13 @@ pad
 }
 .content
 {
-    margin: 100px 300px 10px 300px;
+    padding: 100px 300px 10px 300px;
     color: white;
     position: relative;
     z-index: 1;
     word-wrap: break-word;
     overflow: auto;
-    min-height: 75%;
+    min-height: 85%;
 }
 .push
 {
@@ -551,13 +557,26 @@ textarea.contact-form-text
     color: white;
 }
 
+.gist
+{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.gist .blob-wrapper
+{    
+    max-height: 400px;
+    overflow-y: scroll !important;
+}
 
 @media screen and (max-width:1260px)
 {
     .content
     {
-        margin: 40px 40px;
-        min-height: 81%;
+        padding: 40px 40px;
+        min-height: 85%;
     }
 
     .imgpopup .imgshow
@@ -613,8 +632,8 @@ textarea.contact-form-text
 
     .content
     {
-        margin: 10px 20px;
-        min-height: 84%;
+        padding: 10px 20px;
+        min-height: 85%;
     }  
 
     .container
@@ -631,7 +650,7 @@ textarea.contact-form-text
 {
     .content
     {
-        margin: 10px 10px;
+        padding: 10px 10px;
     }
 
     .row
