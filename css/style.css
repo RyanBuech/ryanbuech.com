@@ -293,6 +293,7 @@ pad
 .content a.teal
 {
     color: teal;
+    font-size: 24px;
     text-decoration: none;
     font-weight: 700;
     line-height: 50px;
