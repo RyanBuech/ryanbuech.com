@@ -14,41 +14,18 @@
     <link rel="image_src" href="./images/MetaImage.jpg">
     <!-- HTML Meta Tags -->
     <title>Ryan Buech - Hover 4 Hire</title>
-    <meta name="description" content="Ryan Buech is a Developer based in Fayetteville, AR who specializes in game developing, game design, and occasionally web developing.">
 
-    <!-- Google / Search Engine Tags -->
-    <meta itemprop="name" content="Ryan Buech">
-    <meta itemprop="description" content="Ryan Buech is a Developer based in Fayetteville, AR who specializes in game developing, game design, and occasionally web developing.">
-    <meta itemprop="image" content="./images/MetaImage.jpg">
-
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://ryanbuech.com">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Ryan Buech">
-    <meta property="og:description" content="Ryan Buech is a Developer based in Fayetteville, AR who specializes in game developing, game design, and occasionally web developing.">
-    <meta property="og:image" content="./images/MetaImage.jpg">
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ryan Buech">
-    <meta name="twitter:description" content="Ryan Buech is a Developer based in Fayetteville, AR who specializes in game developing, game design, and occasionally web developing.">
-    <meta name="twitter:image" content="./images/MetaImage.jpg">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(function()
+        {
+            $("#includeHTML").load("include.html");
+        });
+    </script>
+    <div id="includeHTML"></div>
 </head>
 
 <body>
-    <div class="nav">
-        <label for="toggle">&#9776;</label>
-        <input type="checkbox" id="toggle">
-        <div class="menu">
-                <a href="./index.html">Home</a>
-                <a href="./work.html">Work</a>
-                <a href="./resume.html">Resume</a>
-                <a href="./contact.html">Contact</a>
-        </div>        
-
-        <img src="./images/White R.png" class="cover">
-    </div>     
-
     <div class="content">
         <div class="row">
             <div class="column">
@@ -100,16 +77,6 @@
 
     <div class="footer">
         <p class="foot"></p>
-    </div>
-
-    <div class="video-container">
-        <div class="color-overlay"></div>
-            <video autoplay loop muted poster="./videos/Poster.png">
-                <source src="./videos/Geometric Particles.mp4" type="video/mp4">
-                <source src="./videos/Geometric Particles.webm" type="video/webm">
-                <source src="./videos/Geometric Particles.ogv" type="video/ogg">
-            </video>
-        </div>
     </div>   
 
     <script src="./includes/jquery-3.4.1.min.js"></script>
