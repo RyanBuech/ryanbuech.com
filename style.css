@@ -304,6 +304,7 @@ p {
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
+	/* animation: services_reveal 1s ease 1; */
 }
 #services .service-item::after {
 	content: '';
@@ -403,7 +404,7 @@ p {
 #projects .project-img img {
 	transition: 0.3s ease transform;
 }
-#projects .project-item:hover .project-img img {
+#projects .project-img:hover img {
 	transform: scale(1.1);
 }
 /* End Projects section */
@@ -576,6 +577,16 @@ p {
 		font-weight: 4rem;
 	}
 }
+@keyframes services_reveal{
+	0%{
+		opacity: 0;
+		transform: scale(.5);
+	}
+	100%{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
 /* End Keyframes */
 
 /* Media Query For Tablet */
@@ -721,9 +732,9 @@ p {
 	}
 	#projects .project-item {
 		height: 400px;
-		margin: 0;
+		margin: 0px;
 		width: 100%;
-		border-radius: 0;
+		border-radius: 0px;
 	}
 	#projects .all-projects .project-info {
 		height: 100%;
