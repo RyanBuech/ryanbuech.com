@@ -8,7 +8,7 @@ html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
-	background-color: rgb(31, 31, 31);
+	background-color: #1f1f1f;
 }
 a {
 	text-decoration: none;
@@ -453,7 +453,7 @@ p {
 	top: 19px;
 	height: 98%;
 	width: 98%;
-	border: 7px solid crimson;
+	border: 7px solid #dc143c;
 	z-index: -1;
 }
 /* End About Section */
@@ -545,6 +545,115 @@ p {
 }
 /* End Footer */
 
+/* Portfolio section */
+#portfolio .portfolio {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#portfolio .portfolio-header h1 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#portfolio .portfolio-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#portfolio .portfolio-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
+	padding: 5px 0px;
+}
+#portfolio .portfolio-item{
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;	
+	padding: 5px 5px;
+}
+#portfolio .portfolio-img {
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;	
+	padding: 0px 0px;
+}
+#portfolio .portfolio-img:after {
+	content: none;
+	position: absolute;
+	overflow: hidden;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.7;
+	padding: 0px 0px;
+}
+#portfolio .portfolio-img img {
+	transition: 0.3s ease transform;
+	padding: 0px 0px;	
+}
+#portfolio .portfolio-img img:hover {
+	transform: scale(1.1);
+}
+#portfolio .portfolio-fullimg{
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.9);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+#portfolio .portfolio-fullimg img{
+	width: 80%;
+	height: 80%;
+	object-fit: contain;
+}
+/* End Portfolio section */
+
+/* Downloads section */
+#downloads .downloads {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
+	align-items: center;
+	justify-content: center;
+}
+#downloads .downloads-header h1 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+#downloads .downloads-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#downloads .downloads-column{
+	float : left;
+	width: 50%;
+	padding: 5px;
+}
+#downloads .downloads-row::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
 /* Keyframes */
 @keyframes hamburger_puls {
 	0% {
@@ -588,6 +697,23 @@ p {
 	}
 }
 /* End Keyframes */
+
+/* Media Query For Mobile */
+@media only screen and (min-width: 300px) {
+	#portfolio .portfolio-section .portfolio-item {
+		height: 100%;
+		padding: 5px 0px;
+		width: 100%;
+	}
+	#portfolio .portfolio-row {
+		margin: 0;
+	}
+	#downloads .downloads-column{
+		float:left;
+		width: 100%;
+		padding: 10px;
+	}
+}
 
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
@@ -691,6 +817,37 @@ p {
 		padding-left: 20px;
 	}
 	/* End contact  */
+
+	/* Portfolio */
+	#portfolio .portfolio-row {
+		flex-direction: row;
+	}
+	#portfolio .portfolio-row:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#portfolio .portfolio-row {
+		height: 400px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#portfolio .portfolio-section .portfolio-info {
+		height: 100%;
+	}
+	#portfolio .portfolio-section .portfolio-img {
+		height: 100%;
+	}
+	#portfolio .portfolio-section .portfolio-item {
+		height: 100%;
+		padding: 0px 5px;		
+	}
+	/* End Portfolio */
+	#downloads .downloads-column{
+		float : left;
+		width: 50%;
+		padding: 5px;
+	}
+	
 }
 /* End Media Query For Tablet */
 
@@ -743,5 +900,29 @@ p {
 		height: 100%;
 	}
 	/* End Project */
+
+	/* Portfolio */
+	#portfolio .portfolio-row {
+		flex-direction: row;
+	}
+	#portfolio .portfolio-row:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#portfolio .portfolio-row {
+		height: 400px;
+		margin: 0px;
+		width: 100%;
+		border-radius: 0px;
+	}
+	#portfolio .portfolio-section .portfolio-info {
+		height: 100%;
+	}
+	#portfolio .portfolio-section .portfolio-item {
+		height: 100%;
+	}
+	#portfolio .portfolio-section .portfolio-img {
+		height: 100%;
+	}
+	/* End Portfolio */
 }
 /* End  Media Query For Desktop */
