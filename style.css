@@ -653,6 +653,9 @@ p {
 	display: table;
 	clear: both;
 }
+.downloads-column iframe{
+	height: 620px;
+}
 
 /* Keyframes */
 @keyframes hamburger_puls {
