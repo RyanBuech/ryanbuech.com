@@ -13,7 +13,7 @@
   <link rel="image_src" href="./images/MetaImage.jpg">
   <link rel="shortcut icon" type="image/png" href="./img/R.png"/>
   <title>Ryan Buech</title>
-  <meta name="description" content="Ryan Buech's Downloads.">
+  <meta name="description" content="Ryan Buech's Gear.">
 </head>
 
 <body class="external">
@@ -43,30 +43,45 @@
   </section>
   <!-- End Header -->  
 
-  <!-- Downloads Section -->
-  <section id="downloads">
-    <div class="downloads container">
-
-      <div class="downloads-header">
-        <h1 class="section-title"><span>D</span>ownloads</h1>
+  <!-- Gear Section -->
+  <section id="gear">
+    <div class="gear container">
+      <div class="gear-header">
+        <h1 class="section-title"><span>G</span>ear</h1>
       </div>
-      <div class="download-section">
-        <div class="download-row">
-            <div class="downloads-column">
-              <div class="payhip-embed-page" data-key="fWSnm">...</div><script type="text/javascript" src="https://payhip.com/embed-page.js?v=24u68984"></script>
-            </div>
-            <div class="downloads-column">
-              <div class="payhip-embed-page" data-key="fWSnm">...</div><script type="text/javascript" src="https://payhip.com/embed-page.js?v=24u68984"></script>
-            </div>
-            <div class="downloads-column">
-              <div class="payhip-embed-page" data-key="fWSnm">...</div><script type="text/javascript" src="https://payhip.com/embed-page.js?v=24u68984"></script>
-            </div>
-        </div>   
+      <div class="all-gear">
+        <div class="gear-item">
+          <div class="gear-info">
+            <h1>Sony a7 IV</h1>
+            <h2></h2>
+            <p>Camera detail 1. </p>
+            <p>Camera detail 1. </p>
+            <p>Camera detail 1. </p>
+          </div>
+          <div class="gear-img">
+            <a href="https://youtu.be/Uk6p1VTKXjc" target="_blank">
+              <img src="./img/Southern California 2021 Thumbnail.jpg" alt="img">
+            </a>
+          </div>
         </div>
-      </div>
+
+        <div class="gear-item">
+            <div class="gear-info">
+              <h1>Sony a7 IV</h1>
+              <h2></h2>
+              <p>Camera detail 1. </p>
+              <p>Camera detail 1. </p>
+              <p>Camera detail 1. </p>
+            </div>
+            <div class="gear-img">
+              <a href="https://youtu.be/Uk6p1VTKXjc" target="_blank">
+                <img src="./img/Southern California 2021 Thumbnail.jpg" alt="img">
+              </a>
+            </div>
+          </div>
     </div>
-  </section>
-  <!-- End Downloads Section -->
+</div>
+  <!-- End Gear Section -->
 
   <!-- Footer -->
   <section id="footer">
@@ -90,6 +105,18 @@
   </section>
   <!-- End Footer -->
   <script src="./external.js"></script>
+  <script>
+      var fullImgBox = document.getElementById("fullImgBox");
+      var fullImg = document.getElementById("fullImg");
+
+      function openFullImg(src){
+          fullImgBox.style.display = "flex";
+          fullImg.src = src;
+      }
+      function closeFullImg(){
+        fullImgBox.style.display = "none";
+      }
+  </script>
 </body>
 
 </html>
