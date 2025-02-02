@@ -818,7 +818,7 @@ body.light-theme{
 
 .contact__form-tag{
   position: inherit;
-  top: -.75rem;
+  top: -1.25rem;
   left: 1.25rem;
   font-size: var(--smaller-font-size);
   padding: .25rem;
@@ -832,6 +832,10 @@ body.light-theme{
 
 .contact__form-area textarea{
   resize: none;
+}
+
+.hidden{
+  display: none;
 }
 
 /*=============== Projects ===============*/
